@@ -1,6 +1,6 @@
-// App.jsx
 import React, { useState } from "react";
 import { HeartPulseIcon } from "lucide-react";
+import { Link } from "react-router-dom"; // tambahkan Link
 
 const App = () => {
   const [weight, setWeight] = useState("");
@@ -79,11 +79,11 @@ const App = () => {
               </p>
               <p className="text-xl font-semibold text-emerald-400">{category}</p>
             </div>
-            <button
-              className="mt-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded-xl font-semibold transition"
-            >
-              Lihat Detail
-            </button>
+            <Link to="/detail">
+              <button className="mt-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded-xl font-semibold transition">
+                Lihat Detail
+              </button>
+            </Link>
           </div>
         )}
       </div>
